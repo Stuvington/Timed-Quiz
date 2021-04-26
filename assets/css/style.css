@@ -4,7 +4,18 @@ body {
     font-family: Calibri, 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', sans-serif;
     color: tomato;
 }
+ 
+#highScore {
+    position:absolute;
+    top: 0px;
+    left: 0px;
+}
 
+#timer {
+    position:absolute;
+    top: 0px;
+    right: 0px;
+}
 
 table {
     margin:0 auto;
