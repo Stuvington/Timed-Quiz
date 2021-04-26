@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Pop Quiz - High Scores</title>
+</head>
+
+<body>
+    <h1>High Scores</h1>
+
+    <script>
+        function generate_table() {
+            var body = document.getElementsByTagName("body")[0];
+            var tbl = document.createElement("table");
+            var tblBody = document.createElement("tbody");
+
+            for (var i = 0; i < 11; i++) {
+                var row = document.createElement("tr");
+
+                for (var j = 0; j < 3; j++) {
+                    var cell = document.createElement("td");
+                    var cellText = document.createTextNode("cell in row "+i+", column "+j);
+                    cell.appendChild(cellText);
+                    row.appendChild(cell);
+                }
+
+                tblBody.appendChild(row);
+            }
+
+            tbl.appendChild(tblBody);
+            body.appendChild(tbl);
+            tbl.setAttribute("border", "2");
+        }
+        generate_table()
+    </script>
+
+    <table>
+        <tr>
+            <th>Place</th>
+            <th>Name</th>
+            <th>Score</th>
+        </tr>
+        <tr>
+            <th>1st</th>
+            <th id="result.first"></th>
+            <th>{result.first[2]</th>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>{name2}</td>
+            <td>{score2}</td>
+        </tr>
+    </table>
+
+    <!-- <p>1: <span id=""></span></p>
+            <p>2: <span id=""></span></p>
+            <p>3: <span id=""></span></p>
+            <p>4: <span id=""></span></p>
+            <p>5: <span id=""></span></p>
+            <p>6: <span id=""></span></p>
+            <p>7: <span id=""></span></p>
+            <p>8: <span id=""></span></p>
+            <p>9: <span id=""></span></p>
+            <p>10: <span id=""></span></p> -->
+    <!-- Do I need to use a different .js on the second page?? maybe not. -->
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
